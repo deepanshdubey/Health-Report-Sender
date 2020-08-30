@@ -1,3 +1,8 @@
+# Author  : Deepansh Dubey.
+# Date    : 30-Aug-2020.
+# Purpose : Sending the health status of a patient to their family member's phone number and email.
+
+
 import pandas as pd
 import datetime
 import smtplib
