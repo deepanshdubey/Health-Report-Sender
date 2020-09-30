@@ -29,6 +29,13 @@ def sendSMS (number, message):
     dic = response.json()
     print(dic)
     
+    def sendSMS (number, message):
+    url = 'https://www.fast2sms.com/dev/bulk'
+    params = {"authorization":"key","sender_id":"FSTSMS","message": message,"language":"english","route":"p","numbers":number}
+    response = requests.get(url, params=params)
+    dic = response.json()
+    print(dic)
+    
 if __name__ == "__main__":
     df = pd.read_excel("data.xlsx")
     today = datetime.datetime.now().strftime("%d-%m-%Y")
