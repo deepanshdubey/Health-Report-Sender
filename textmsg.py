@@ -14,6 +14,7 @@ import json
 GMAIL_ID = "exm@exp.com"
 GMAIL_PSWD = "password"
 
+#Function to activate Google SMTP and send mail :-
 def sendEmail(to, name, sub, msg):
     print(f"Email sent to {to} with subject: {sub} and message {msg}")
     s = smtplib.SMTP('smtp.gmail.com', 587)
@@ -22,6 +23,7 @@ def sendEmail(to, name, sub, msg):
     s.sendmail(GMAIL_ID, to,f"subject: {sub}\n\n This is to inform you that Mr. {name} is {msg}")
     s.quit()
 
+#Function to send sms :-    
 def sendSMS (number, message):
     url = 'https://www.fast2sms.com/dev/bulk'
     params = {"authorization":"key","sender_id":"FSTSMS","message": message,"language":"english","route":"p","numbers":number}
